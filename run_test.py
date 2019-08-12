@@ -36,9 +36,9 @@ if __name__ == "__main__":
     fp = open(filenames, 'wb')
     # 定义测试报告
     runner = HTMLTestRunner(stream=fp,  # 报告文件地址
-                            title='新哈罗后台Web_UI自动化测试', # 报告标题
+                            title='XXXX', # 报告标题
                             description="功能测试", #报告描述
-                            tester='李君' #执行人员
+                            tester='XXX' #执行人员
                             )
     runner.run(testsuit)
     fp.close()
