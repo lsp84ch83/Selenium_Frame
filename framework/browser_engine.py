@@ -14,10 +14,10 @@ logger = Logger(logger="BrowserEngine").getlog()
 
 class BrowserEngine(object):
     dir = os.path.dirname(os.path.abspath('.'))                         # 注意相对路径获取方法
-    chrome_driver_path = dir + 'HolloWebNew/tools/chromedriver.exe'        # Chrome浏览器驱动 对应版本68.0 32
-    ie_driver_path = dir + 'HolloWebNew/tools/IEDriverServer.exe'          # IE 浏览器驱动
-    firefox_driver_path = dir + 'HolloWebNew/tools/geckodriver.exe'        # 新版本火狐浏览器需要独立驱动
-    edge_driver_path = dir + 'HolloWebNew/tools/MicrosoftWebDriver.exe'    # Edge浏览器驱动 对应OS 17.17134
+    chrome_driver_path = dir + '自己的项目名称/tools/chromedriver.exe'        # Chrome浏览器驱动 对应版本68.0 32
+    ie_driver_path = dir + '自己的项目名称/tools/IEDriverServer.exe'          # IE 浏览器驱动
+    firefox_driver_path = dir + '自己的项目名称/tools/geckodriver.exe'        # 新版本火狐浏览器需要独立驱动
+    edge_driver_path = dir + '自己的项目名称/tools/MicrosoftWebDriver.exe'    # Edge浏览器驱动 对应OS 17.17134
 
     def __init__(self, driver):
         self.driver = driver
@@ -26,7 +26,7 @@ class BrowserEngine(object):
     def open_browser(self, driver):
         config = configparser.ConfigParser()
         # file_path = os.path.dirname(os.getcwd()) + '/config/config.ini'
-        file_path = os.path.dirname(os.path.abspath('.')) + 'HolloWebNew/config/config.ini'
+        file_path = os.path.dirname(os.path.abspath('.')) + '自己的项目名称/config/config.ini'
         config.read(file_path)
 
         browser = config.get("browserType", "browserName")
