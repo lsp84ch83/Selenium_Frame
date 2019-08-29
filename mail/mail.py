@@ -15,14 +15,14 @@ def senmail(user, password, now, *receive_letter):
     mail_host = "smtp.qq.com"
     # 发送邮箱用户/密码
     mail_user = user
-    mail_pass = password  #'rxsqygisnojybhhb'
+    mail_pass = password
 
     # 接收邮箱,可定义多个接收人
     receivers = []
     for mailbox in receive_letter:
         receivers.append(mailbox)
     print(receivers)
-    #receivers = receive_letter #'13521895260@163.com'
+    #receivers = receive_letter 
 
     # 发送邮件主题
     subject = '测试报告'
